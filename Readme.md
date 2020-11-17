@@ -44,10 +44,9 @@ content-length: 176
 * It is often desirable to store metadata associated with the card number, the payment card attributes payload can be amended with a PUT request. Below a PUT example to associate a name with the payment card.
 ```bash$
 $ curl -X PUT 'https://szc14cspaa.execute-api.eu-west-1.amazonaws.com/Prod/api2/my-tests/payment-card?id=0e9998d3-51aa-4ddc-8ab6-621aff5cd7b0' -H 'Content-Type: application/json' -d '{"Name":"John Smith"}' -i
-
-$ curl -X GET 'https://szc14cspaa.execute-api.eu-west-1.amazonaws.com/Prod/api2/my-tests/payment-card?id=0e9998d3-51aa-4ddc-8ab6-621aff5cd7b0'
 ```
 Updated response
 ```
+$ curl -X GET 'https://szc14cspaa.execute-api.eu-west-1.amazonaws.com/Prod/api2/my-tests/payment-card?id=0e9998d3-51aa-4ddc-8ab6-621aff5cd7b0'
 {"number":"6304 9062 4709 6405","brand":"Mastercard","type":"Debit","issuer":"Bank Of Ireland","country":"Ireland","attributes":{"uuid":"0e9998d3-51aa-4ddc-8ab6-621aff5cd7b0","Name":"John Smith"}}%
 ```
